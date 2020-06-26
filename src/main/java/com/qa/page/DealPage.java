@@ -1,5 +1,11 @@
 package com.qa.page;
 
-public class DealPage {
+import com.qa.base.BasePage;
 
+public class DealPage extends BasePage {
+
+	public DealPage()
+	{
+		System.out.println("Deal page");
+	}
 }
