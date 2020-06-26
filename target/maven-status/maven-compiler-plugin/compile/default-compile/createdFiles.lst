@@ -1,0 +1,7 @@
+com\qa\base\BasePage.class
+com\qa\page\HomePage.class
+com\qa\util\ElementUtils.class
+com\qa\util\Constants.class
+com\qa\util\JavaScriptUtils.class
+com\qa\page\LoginPage.class
+com\qa\util\CredentialsUtil.class
