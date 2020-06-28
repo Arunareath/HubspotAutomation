@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="3" total="4" passed="0">
+<testng-results skipped="0" failed="1" ignored="3" total="6" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Hub Spot Regression Suite" duration-ms="36981" started-at="2020-06-26T06:07:40Z" finished-at="2020-06-26T06:08:17Z">
+  <suite name="Hub Spot Regression Suite" duration-ms="142096" started-at="2020-06-28T01:28:43Z" finished-at="2020-06-28T01:31:05Z">
     <groups>
     </groups>
-    <test name="Hub Spot Functional Regression Test" duration-ms="36981" started-at="2020-06-26T06:07:40Z" finished-at="2020-06-26T06:08:17Z">
+    <test name="Hub Spot Functional Regression Test" duration-ms="142096" started-at="2020-06-28T01:28:43Z" finished-at="2020-06-28T01:31:05Z">
       <class name="com.qa.test.LoginPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.test.LoginPageTest@ceb4bd2]" name="setup" is-config="true" duration-ms="7753" started-at="2020-06-26T06:07:40Z" finished-at="2020-06-26T06:07:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="loginpagetitletest()[pri:1, instance:com.qa.test.LoginPageTest@ceb4bd2]" name="loginpagetitletest" duration-ms="27706" started-at="2020-06-26T06:07:48Z" finished-at="2020-06-26T06:08:15Z">
+        <test-method status="FAIL" signature="loginpagetitletest()[pri:1, instance:com.qa.test.LoginPageTest@1bf0f6f6]" name="loginpagetitletest" duration-ms="20934" started-at="2020-06-28T01:29:57Z" finished-at="2020-06-28T01:30:18Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for title to contain "HubSpot Login123". Current title: "HubSpot Login" (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'LAPTOP-A8F5AB7C', ip: '192.168.43.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\ARUNAR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61175}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 975d239bce0f074de2363b43bc9bb850]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\ARUNAR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a666d695e31db8a7c78ba6033e6625f2]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain "HubSpot Login123". Current title: "HubSpot Login" (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'LAPTOP-A8F5AB7C', ip: '192.168.43.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\ARUNAR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61175}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 975d239bce0f074de2363b43bc9bb850
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\ARUNAR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a666d695e31db8a7c78ba6033e6625f2
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
 at com.qa.util.ElementUtils.waitforvisibitytitle(ElementUtils.java:69)
@@ -64,11 +60,33 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginpagetitletest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.test.LoginPageTest@ceb4bd2]" name="teardown" is-config="true" duration-ms="717" started-at="2020-06-26T06:08:16Z" finished-at="2020-06-26T06:08:17Z">
+      </class> <!-- com.qa.test.LoginPageTest -->
+      <class name="com.qa.test.HomePageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.test.HomePageTest@56bc3fac]" name="setup" is-config="true" duration-ms="64642" started-at="2020-06-28T01:28:43Z" finished-at="2020-06-28T01:29:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.test.LoginPageTest@1bf0f6f6]" name="setup" is-config="true" duration-ms="8765" started-at="2020-06-28T01:29:48Z" finished-at="2020-06-28T01:29:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="homepagetitleTest()[pri:1, instance:com.qa.test.HomePageTest@56bc3fac]" name="homepagetitleTest" duration-ms="34441" started-at="2020-06-28T01:30:20Z" finished-at="2020-06-28T01:30:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepagetitleTest -->
+        <test-method status="PASS" signature="homepageheaderTest()[pri:2, instance:com.qa.test.HomePageTest@56bc3fac]" name="homepageheaderTest" duration-ms="1543" started-at="2020-06-28T01:30:54Z" finished-at="2020-06-28T01:30:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepageheaderTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.test.HomePageTest@56bc3fac]" name="teardown" is-config="true" duration-ms="6608" started-at="2020-06-28T01:30:56Z" finished-at="2020-06-28T01:31:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.qa.test.LoginPageTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.test.LoginPageTest@1bf0f6f6]" name="teardown" is-config="true" duration-ms="2668" started-at="2020-06-28T01:31:02Z" finished-at="2020-06-28T01:31:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.qa.test.HomePageTest -->
     </test> <!-- Hub Spot Functional Regression Test -->
   </suite> <!-- Hub Spot Regression Suite -->
 </testng-results>
