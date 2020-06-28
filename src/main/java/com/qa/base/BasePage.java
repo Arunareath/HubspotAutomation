@@ -25,11 +25,11 @@ public class BasePage {
 	public static boolean header;
 	OptionsManager om;
 
-//	public static ThreadLocal<WebDriver> thread=new ThreadLocal<WebDriver>();
-//	public static synchronized WebDriver getdriver()
-//	{
-//		return thread.get();
-//	}
+	public static ThreadLocal<WebDriver> thread=new ThreadLocal<WebDriver>();
+	public static synchronized WebDriver getdriver()
+	{
+		return thread.get();
+	}
 	public WebDriver initializedriver()
 	{	
 		header = prop.getProperty("highlight").equals("yes");
@@ -38,23 +38,23 @@ public class BasePage {
 		if(prop.getProperty("browser").equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();	
-			driver=new ChromeDriver(om.getchromeoptions());
-			//thread.set(new ChromeDriver(om.getchromeoptions()));
-			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(Constants.time, TimeUnit.SECONDS);
-			driver.get(prop.getProperty("url"));	
+			//driver=new ChromeDriver(om.getchromeoptions());
+			thread.set(new ChromeDriver(om.getchromeoptions()));
+			getdriver().manage().deleteAllCookies();
+			getdriver().manage().timeouts().implicitlyWait(Constants.time, TimeUnit.SECONDS);
+			getdriver().get(prop.getProperty("url"));	
 			
 			
 		}
 		else if(prop.getProperty("browser").equals("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();	
-			//thread.set(new FirefoxDriver());
-			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(Constants.time, TimeUnit.SECONDS);
-			driver.get(prop.getProperty("url"));		
+			thread.set(new FirefoxDriver());
+			getdriver().manage().deleteAllCookies();
+			getdriver().manage().timeouts().implicitlyWait(Constants.time, TimeUnit.SECONDS);
+			getdriver().get(prop.getProperty("url"));		
 		}
-		return driver;
+		return getdriver();
 	}
 
 	public Properties initializeprop()
