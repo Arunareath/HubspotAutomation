@@ -15,7 +15,7 @@
 		
 		<classes>
 			<class name="com.qa.test.LoginPageTest" />
-			<class name="com.qa.test.HomePageTest" />
+			<!-- <class name="com.qa.test.HomePageTest" /> -->
 		</classes>
 		
 	</test>
