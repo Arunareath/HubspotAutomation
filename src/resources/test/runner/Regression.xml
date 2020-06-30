@@ -4,20 +4,23 @@
 <suite name="Hub Spot Regression Suite">
 
 	<listeners>
-	    <!--<listener class-name="com.qa.hubspot.listeners.TesultsListener" /> -->
-		<listener class-name="com.qa.listners.ExtentReportListener" />
-	<!-- 	<listener class-name="com.qa.listners.TestAllureListener" /> -->
+
+		<!-- <listener class-name="com.qa.hubspot.listeners.TesultsListener" />
+		<listener class-name="com.qa.hubspot.listeners.ExtentReportListener" />
+		<listener class-name="com.qa.hubspot.listeners.TestAllureListener" /> -->
+
 		<!-- <listener class-name="com.qa.hubspot.listeners.ScreenshotListener" /> -->
+
+
+
 	</listeners>
 
 	<test name="Hub Spot Functional Regression Test">
-	<!-- 	<parameter name="browser" value="chrome" /> -->
-		
+		<!-- <parameter name="browser" value="chrome" /> -->
 		<classes>
+
 			<class name="com.qa.test.LoginPageTest" />
-			<!-- <class name="com.qa.test.HomePageTest" /> -->
+
 		</classes>
-		
 	</test>
 </suite> 
-
