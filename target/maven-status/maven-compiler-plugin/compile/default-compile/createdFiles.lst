@@ -1,7 +1,13 @@
 com\qa\base\BasePage.class
+com\qa\page\ContactsPage.class
 com\qa\page\HomePage.class
-com\qa\util\ElementUtils.class
+com\qa\page\DealPage.class
+com\qa\util\ExcelUtil.class
 com\qa\util\Constants.class
+com\qa\util\CredentialsUtil.class
+com\qa\base\OptionsManager.class
+com\qa\util\ElementUtils.class
+com\qa\listners\ExtentReportListener.class
+com\qa\listners\TestAllureListener.class
 com\qa\util\JavaScriptUtils.class
 com\qa\page\LoginPage.class
-com\qa\util\CredentialsUtil.class

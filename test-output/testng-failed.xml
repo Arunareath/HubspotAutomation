@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Hub Spot Regression Suite]">
-  <listeners>
-    <listener class-name="com.qa.listners.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="5" name="Hub Spot Functional Regression Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.qa.test.LoginPageTest">
         <methods>
@@ -14,5 +11,5 @@
         </methods>
       </class> <!-- com.qa.test.LoginPageTest -->
     </classes>
-  </test> <!-- Hub Spot Functional Regression Test(failed) -->
-</suite> <!-- Failed suite [Hub Spot Regression Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.qa.test.LoginPageTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 31.076 s <<< FAILURE! - in com.qa.test.LoginPageTest
-loginpagetitletest(com.qa.test.LoginPageTest)  Time elapsed: 0.022 s  <<< FAILURE!
-java.lang.AssertionError: expected [HubSpot Login] but found [Checking browser]
-	at com.qa.test.LoginPageTest.loginpagetitletest(LoginPageTest.java:42)
-

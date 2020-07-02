@@ -49,7 +49,7 @@ public class BasePage {
 		else if(prop.getProperty("browser").equals("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();	
-			thread.set(new FirefoxDriver());
+			thread.set(new FirefoxDriver(om.getfirefoxoptions()));
 			getdriver().manage().deleteAllCookies();
 			getdriver().manage().timeouts().implicitlyWait(Constants.time, TimeUnit.SECONDS);
 			getdriver().get(prop.getProperty("url"));		
@@ -69,7 +69,7 @@ public class BasePage {
 
 			if (env.equals(null))
 			{
-				path=".\\src\\main\\java\\com\\qa\\properties\\qa.properties";
+				path=".\\src\\main\\java\\com\\qa\\properties\\config.properties";
 			}
 			else
 			{
@@ -92,7 +92,7 @@ public class BasePage {
 
 		try
 		{
-			FileInputStream ip=new FileInputStream(".\\src\\main\\java\\com\\qa\\properties\\config.properties");
+			FileInputStream ip=new FileInputStream(path);
 			prop.load(ip);
 		}
 		catch (FileNotFoundException e) {
