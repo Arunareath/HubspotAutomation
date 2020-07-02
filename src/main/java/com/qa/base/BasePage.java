@@ -34,7 +34,7 @@ public class BasePage {
 	{	
 		header = prop.getProperty("highlight").equals("yes");
 		om=new OptionsManager(prop);
-		
+
 		if(prop.getProperty("browser").equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();	
@@ -43,8 +43,8 @@ public class BasePage {
 			getdriver().manage().deleteAllCookies();
 			getdriver().manage().timeouts().implicitlyWait(Constants.time, TimeUnit.SECONDS);
 			getdriver().get(prop.getProperty("url"));	
-			
-			
+
+
 		}
 		else if(prop.getProperty("browser").equals("firefox"))
 		{
@@ -60,27 +60,36 @@ public class BasePage {
 	public Properties initializeprop()
 	{
 		prop=new Properties();
-//		String path=null;
-//		String env=null;
-//
-//		try
-//		{
-//			env=System.getProperty("env");
-//
-//			if(env.equals("config"))
-//			{
-//				path=".\\src\\main\\java\\com\\qa\\properties\\config.properties";
-//
-//			}else if(env.equals("qa"))
-//			{
-//				path=".\\src\\main\\java\\com\\qa\\properties\\qa.properties";
-//
-//			}
-//
-//		}catch(Exception e)
-//		{
-//			System.out.println("no such path");
-//		}
+		String path=null;
+		String env=null;
+
+		try
+		{
+			env=System.getProperty("env");
+
+			if (env.equals(null))
+			{
+				path=".\\src\\main\\java\\com\\qa\\properties\\qa.properties";
+			}
+			else
+			{
+				if(env.equals("config"))
+				{
+					path=".\\src\\main\\java\\com\\qa\\properties\\config.properties";
+
+				}else if(env.equals("qa"))
+				{
+					path=".\\src\\main\\java\\com\\qa\\properties\\qa.properties";
+
+				}
+
+			}
+		}catch(Exception e)
+		{
+			System.out.println("no such path");
+		}
+
+
 		try
 		{
 			FileInputStream ip=new FileInputStream(".\\src\\main\\java\\com\\qa\\properties\\config.properties");
@@ -93,7 +102,7 @@ public class BasePage {
 		}
 		return prop;
 	}
-	
+
 	public String getScreenshot() throws IOException
 	{
 		TakesScreenshot ts=((TakesScreenshot)driver);
